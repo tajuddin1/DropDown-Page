@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.container {
+  width: 1210px;
+  margin: auto;
+}
+
+.top_brand_title {
+  text-align: center;
+  font-size: 30px;
+  font-family: initial;
+  color: #57aca5;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.top_brand_title span {
+  font-family: inherit;
+  color: #8d8d8d;
+}
+
+.top_brand_title_wrapper {
+  padding: 10px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #57aca5;
+  margin-top: 50px;
+}
+
+ul {
+  list-style: none;
+}
+
+.brand_list_link {
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Source Sans Pro";
+  padding: 10px 14px;
+  display: inline-block;
+  color: #44484b;
+}
+
+.memu_item ul li:hover {
+  border-radius: 5px;
+}
+
+a.brand_list_link:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: #000;
+}
+.brand_list_link.disabled {
+  color: rgba(0, 0, 0, 0.3);
+  cursor: default;
+}
+.brand_list_link.disabled:hover {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  cursor: default;
+}
+.manufacturer_list_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.left_side_menu_wrapper {
+  padding-top: 32px;
+  width: 25%;
+}
+
+.memu_item ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 15px;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.right_side_contnet_wrapper {
+  width: 75%;
+}
+.right_side_contnet_wrapper > ul {
+  margin-bottom: 150px;
+}
+
+.right_side_contnet_wrapper .brand_item ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.memu_item ul li {
+  width: 40px;
+  height: 34px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.menu_title {
+  font-size: 20px;
+  font-family: "Source Sans Pro";
+  font-weight: 600;
+  padding: 0px 10px;
+  color: #212529;
+  margin-bottom: 15px;
+}
+.brand_label h2 {
+  font-size: 25px;
+  font-weight: 600;
+  padding-bottom: 5px;
+  color: #4e505e;
+  font-family: "Source Sans Pro";
+}
+
+.brand_label {
+  border-bottom: 1px solid #a7a7a7;
+  margin-bottom: 15px;
+}
+
+.right_side_contnet_wrapper > ul > li {
+  padding-top: 32px;
+}
+
+.brand_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 15px;
+  padding: 8px 10px;
+}
+
+.logo_wreapper {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #d1d1d1;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.logo_wreapper img {
+  width: 100%;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.brand_item_link {
+  font-size: 18px;
+  font-family: "Source Sans Pro";
+  color: #4e515e;
+  text-decoration: none;
+}
+.brand_item_link:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* -------------Additional CSS For Sticky Sidebar ---------
+
+---------If you dont need the Sticky Sidebar Then Delete those CSS------*/
+
+.left_side_menu_wrapper {
+  position: relative;
+}
+
+.stiky_sidebar {
+  position: sticky;
+  top: 32px;
+}
+
+/* -------------End Sticky Sidebar ---------*/
+
+/* Responive Css */
+
+/* For Laptop: */
+@media only screen and (max-width: 1025px) {
+  .container {
+    width: 90%;
+    margin: auto;
+  }
+  .memu_item ul {
+    padding: 0 10px;
+  }
+  .left_side_menu_wrapper {
+    width: 30%;
+  }
+  .right_side_contnet_wrapper {
+    width: 70%;
+  }
+  .top_brand_title {
+    font-size: 28px;
+  }
+}
+/* For Mobile Phones: */
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+    margin: auto;
+  }
+  .top_brand_title {
+    font-size: 24px;
+  }
+  .manufacturer_list_row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .left_side_menu_wrapper,
+  .right_side_contnet_wrapper {
+    width: 100%;
+  }
+  .right_side_contnet_wrapper .brand_item ul {
+    gap: 10px;
+  }
+  .brand_info {
+    gap: 5px;
+    padding: 8px 0px;
+  }
+}
