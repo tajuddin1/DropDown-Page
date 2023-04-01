@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
 
 html {
@@ -18,11 +19,13 @@ html {
 
 .top_brand_title {
   text-align: center;
-  font-size: 30px;
-  font-family: initial;
-  color: #57aca5;
-  font-weight: 700;
+  font-size: 36px;
+  font-family: Calibri;
+  color: #01385e;
+  font-weight: 500;
   letter-spacing: 1px;
+  width: 75%;
+  margin-left: auto;
 }
 
 .top_brand_title span {
@@ -32,9 +35,9 @@ html {
 
 .top_brand_title_wrapper {
   padding: 10px;
-  border-top: 1px solid;
-  border-bottom: 1px solid;
-  border-color: #57aca5;
+  /* border-top: 1px solid; */
+  /* border-bottom: 1px solid; */
+  border-color: #01385e;
   margin-top: 50px;
 }
 
@@ -48,7 +51,10 @@ ul {
   font-family: "Source Sans Pro";
   padding: 10px 14px;
   display: inline-block;
-  color: #44484b;
+  color: #01385e;
+  -webkit-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  transition: 0.4s ease;
 }
 
 .memu_item ul li:hover {
@@ -57,7 +63,7 @@ ul {
 
 a.brand_list_link:hover {
   background: rgba(0, 0, 0, 0.05);
-  color: #000;
+  color: #ed680f;
 }
 .brand_list_link.disabled {
   color: rgba(0, 0, 0, 0.3);
@@ -100,8 +106,9 @@ a.brand_list_link:hover {
 .right_side_contnet_wrapper .brand_item ul {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 10px;
 }
 
 .memu_item ul li {
@@ -126,24 +133,25 @@ a.brand_list_link:hover {
   font-family: "Source Sans Pro";
   font-weight: 600;
   padding: 0px 10px;
-  color: #212529;
+  color: #01385e;
   margin-bottom: 15px;
 }
 .brand_label h2 {
-  font-size: 25px;
-  font-weight: 600;
+  font-size: 28px;
+  font-weight: 500;
   padding-bottom: 5px;
-  color: #4e505e;
+  color: #01385e;
   font-family: "Source Sans Pro";
 }
 
 .brand_label {
-  border-bottom: 1px solid #a7a7a7;
+  border-bottom: 1px solid #9d9d9df0;
   margin-bottom: 15px;
 }
 
 .right_side_contnet_wrapper > ul > li {
   padding-top: 32px;
+  padding-bottom: 10px;
 }
 
 .brand_info {
@@ -160,38 +168,46 @@ a.brand_list_link:hover {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
   padding: 8px 10px;
 }
 
 .logo_wreapper {
-  width: 30px;
-  height: 30px;
-  border: 1px solid #d1d1d1;
-  border-radius: 50%;
-  overflow: hidden;
+  width: 60px;
+  /* border: 1px solid #dddddd54; */
+  /* border-radius: 50%; */
+  /* overflow: hidden; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .logo_wreapper img {
   width: 100%;
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
+  height: 100%;
+  /* -webkit-transform: scale(1.1); */
+  /* -ms-transform: scale(1.1); */
+  /* transform: scale(1.1); */
 }
 .brand_item_link {
-  font-size: 18px;
+  font-size: 20px;
   font-family: "Source Sans Pro";
   color: #4e515e;
   text-decoration: none;
+  -webkit-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  transition: 0.4s ease;
 }
 .brand_item_link:hover {
-  color: #000;
+  color: #ed680f;
   text-decoration: underline;
 }
-
-/* -------------Additional CSS For Sticky Sidebar ---------
-
----------If you dont need the Sticky Sidebar Then Delete those CSS------*/
 
 .left_side_menu_wrapper {
   position: relative;
@@ -202,28 +218,26 @@ a.brand_list_link:hover {
   top: 32px;
 }
 
-/* -------------End Sticky Sidebar ---------*/
-
 /* Responive Css */
 
 /* For Laptop: */
 @media only screen and (max-width: 1025px) {
   .container {
-    width: 90%;
+    width: 95%;
     margin: auto;
   }
   .memu_item ul {
     padding: 0 10px;
   }
-  .left_side_menu_wrapper {
+  /* .left_side_menu_wrapper {
     width: 30%;
-  }
-  .right_side_contnet_wrapper {
+  } */
+  /* .right_side_contnet_wrapper {
     width: 70%;
-  }
-  .top_brand_title {
-    font-size: 28px;
-  }
+  } */
+  .memu_item ul li {
+    width: 36px;
+}
 }
 /* For Mobile Phones: */
 @media only screen and (max-width: 768px) {
@@ -232,8 +246,11 @@ a.brand_list_link:hover {
     margin: auto;
   }
   .top_brand_title {
-    font-size: 24px;
+    font-size: 32px;
   }
+  .memu_item ul li {
+    width: 40px;
+}
   .manufacturer_list_row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -244,11 +261,35 @@ a.brand_list_link:hover {
   .right_side_contnet_wrapper {
     width: 100%;
   }
-  .right_side_contnet_wrapper .brand_item ul {
-    gap: 10px;
+  .top_brand_title {
+    width: 100%;
   }
   .brand_info {
-    gap: 5px;
+    gap: 30px;
     padding: 8px 0px;
   }
+  .brand_list_link{
+    font-family: 18px;
+  }
+  .right_side_contnet_wrapper .brand_item ul {
+    -webkit-column-gap: 10px;
+       -moz-column-gap: 10px;
+            column-gap: 10px;
+    -ms-grid-columns: 1fr 10px 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+}
+@media only screen and (max-width: 425px) {
+    .right_side_contnet_wrapper .brand_item ul {
+        -webkit-column-gap: 10px;
+           -moz-column-gap: 10px;
+                column-gap: 10px;
+        row-gap: 7px;
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+    .right_side_contnet_wrapper>ul{
+        padding: 0 15px;
+    }
 }
